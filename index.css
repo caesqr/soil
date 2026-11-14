@@ -1,0 +1,22 @@
+#map {
+	margin: 40px auto 0;
+	min-width: 360px;
+	min-height: 360px;
+	max-width: 90vw;
+	max-height: 60vh;
+	height: 60vh;
+	resize: both;
+	border: 1px dotted black;
+}
+#main {
+	margin: 40px 10%;
+	display: flex;
+}
+#main > div {
+	flex: 1 0 0;
+}
+
+#width {
+	width: 50%;
+	margin: 40px 10%;
+}
