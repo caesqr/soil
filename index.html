@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Soil</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<script src="index.js" defer></script>
+</head>
+<body>
+	<div id="body">
+		<div id="map"></div><br>
+		1. <b>Area Information:</b> Zoom in the map to your desired location, then click <button id="calculatebounds">here</button> to declare the region that you want to consider. You can drag the bottom-right corner of the map to change the region ratio. Make sure the region is <b>25km² or smaller</b>.
+		<div id="landinfo"></div><br>
+		2. <b>Soil Information:</b> Click <button id="calculatesoil">here</button> to calculate current soil properties in the area selected above.
+		<div id="soilinfo"></div><br>
+		3. <b>Climate Information:</b> Click <button id="calculateclimate">here</button> to calculate climate estimates with historical climates from <input id="startingyear" type="number" value="2015" placeholder="year"> to 2025.
+		<div id="climatebuttons">
+			<button data-key="t">Temperature</button>
+			<button data-key="p">Precipitation</button>
+			<button data-key="l">Solar radiation</button>
+		</div>
+		<canvas id="climateinfo"></canvas><br>
+		4. <b>Crop Information:</b> Select crops to consider for rotation below, then click <button id="calculatecrop">here</button> to calculate the most suitable crop. Growing season ranges: week <input id="week1" type="number" value="20"> to week <input id="week2" type="number" value="40"> and (optionally, for southern-hemisphere regions) week <input id="week3" type="number" value="0"> to week <input id="week4" type="number" value="0">
+		<div id="cropresults"></div>
+	</div>
+	<div id="overlay"></div>
+</body>
+</html>
